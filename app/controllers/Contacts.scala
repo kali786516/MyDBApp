@@ -9,9 +9,7 @@ object Contacts extends Controller {
 
   def index= Action {
     val contacts= Contact.getDBValues
-
     Ok(views.html.index(contacts,Contact.form))
-
   }
 
   def create=Action { implicit request =>
